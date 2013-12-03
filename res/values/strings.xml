@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TimeList</string>
+    <string name="action_settings">Configurações</string>
+    <string name="login">Login</string>
+    <string name="password">Senha</string>
+    <string name="buttonEnter">Entrar</string>
+    <string name="menuPrincipal">Menu Principal</string>
+    <color name="gray">#484848</color>
+
+</resources>
