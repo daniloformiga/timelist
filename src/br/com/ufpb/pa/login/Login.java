@@ -21,15 +21,6 @@ public class Login {
 	public void removeLogin(String login){
 		logins.remove(login);
 	}
-	
-	public boolean verifyCredencials(String login, String passwd){
-		
-		if(logins.containsKey("admin")){
-			return true;
-		}
-		
-		return false;
-	}
-	
+
 }
 

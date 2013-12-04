@@ -33,8 +33,8 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				
-				if(login.verify(loginText.toString(), passwdText.toString())){
-					Intent intent = new Intent(MainActivity.this, Menu.class);
+				if(login.verify(loginText.getText().toString(), passwdText.getText().toString())){
+					Intent intent = new Intent(MainActivity.this, MenuPrincipal.class);
 	        		startActivity(intent);
 				}else{
 					String text = "Login e/ou Senha inválidos";
