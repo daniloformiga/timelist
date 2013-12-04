@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import br.com.ufpb.pa.login.Login;
 import br.com.ufpb.pa.login.LoginController;
 
 public class MainActivity extends Activity {
@@ -34,8 +35,21 @@ public class MainActivity extends Activity {
 			public void onClick(View arg0) {
 				
 				if(login.verify(loginText.getText().toString(), passwdText.getText().toString())){
-					Intent intent = new Intent(MainActivity.this, MenuPrincipal.class);
-	        		startActivity(intent);
+					if(login.verifyPermission(loginText.getText().toString()).equalsIgnoreCase(Login.ADMIN)){
+						Intent intent = new Intent(MainActivity.this, MenuPrincipal.class);
+		        		startActivity(intent);
+					}
+					else if(login.verifyPermission(loginText.getText().toString()).equalsIgnoreCase(Login.SELLER)){
+						Intent intent = new Intent(MainActivity.this, MenuSeller.class);
+		        		startActivity(intent);
+					}else{
+						String text = "Ocorreu um erro nas permissões!";
+						Toast tempMessage = Toast.makeText(getApplicationContext(), text,Toast.LENGTH_SHORT);
+						tempMessage.show();
+						loginText.setText("");
+						passwdText.setText("");
+					}
+					
 				}else{
 					String text = "Login e/ou Senha inválidos";
 					Toast tempMessage = Toast.makeText(getApplicationContext(), text,Toast.LENGTH_SHORT);

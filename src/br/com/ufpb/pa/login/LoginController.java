@@ -1,6 +1,5 @@
 package br.com.ufpb.pa.login;
 
-import java.util.HashMap;
 
 public class LoginController {
 	
@@ -9,7 +8,9 @@ public class LoginController {
 	public void makeLogin(){
 		
 		login.addLogin("admin", "admin");
+		login.addPermission("admin", Login.ADMIN);
 		login.addLogin("vend", "vend");
+		login.addPermission("vend", Login.SELLER);
 		
 	}
 	
@@ -24,6 +25,21 @@ public class LoginController {
 				return true;
 			}else{
 				return false;
+			}
+		}
+	}
+	
+	public String verifyPermission(String loginText){
+		
+		String permission = login.getPermissions().get(loginText);
+		
+		if(permission.equalsIgnoreCase("")){
+			return null;
+		}else{
+			if(permission.equalsIgnoreCase(Login.ADMIN)){
+				return Login.ADMIN;
+			}else{
+				return Login.SELLER;
 			}
 		}
 	}

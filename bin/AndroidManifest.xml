@@ -23,12 +23,8 @@
             </intent-filter>
         </activity>
         
-        <activity
-            
-            android:name="MenuPrincipal"
-            android:label="@string/menuPrincipal"
-           
-        />
+        <activity android:name="MenuPrincipal" android:label="@string/menuPrincipal" />
+        <activity android:name="MenuSeller" android:label="@string/menuSeller"></activity>
         
     </application>
 

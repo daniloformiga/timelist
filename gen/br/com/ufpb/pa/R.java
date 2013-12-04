@@ -36,6 +36,7 @@ public final class R {
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int menu_principal=0x7f030001;
+        public static final int menu_seller=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -46,6 +47,7 @@ public final class R {
         public static final int buttonEnter=0x7f050004;
         public static final int login=0x7f050002;
         public static final int menuPrincipal=0x7f050005;
+        public static final int menuSeller=0x7f050006;
         public static final int password=0x7f050003;
     }
     public static final class style {

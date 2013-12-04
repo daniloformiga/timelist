@@ -7,6 +7,7 @@
     <string name="password">Senha</string>
     <string name="buttonEnter">Entrar</string>
     <string name="menuPrincipal">Menu Principal</string>
+    <string name="menuSeller">Menu Vendedor</string>
     <color name="gray">#484848</color>
 
 </resources>
