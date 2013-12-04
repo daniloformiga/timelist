@@ -30,6 +30,34 @@
            
         />
         
+        <activity
+            
+            android:name="MenuSeller"
+            android:label="@string/menuSeller"
+           
+        />
+        
+        <activity
+            
+            android:name="AddClient"
+            android:label="@string/addClient"
+           
+        />
+        
+        <activity
+            
+            android:name="MenuUsers"
+            android:label="@string/menuUsers"
+           
+        />
+        
+        <activity
+            
+            android:name="AddUser"
+            android:label="@string/addUser"
+           
+        />
+        
     </application>
 
 </manifest>

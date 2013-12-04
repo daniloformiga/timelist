@@ -23,7 +23,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);	
 
-		login.makeLogin();
 		loginText = (EditText) findViewById(R.id.login);
 		passwdText = (EditText) findViewById(R.id.password);
 		Button btnEntrar = (Button) findViewById(R.id.buttonEnter);

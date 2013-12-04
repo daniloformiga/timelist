@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class Login {
 	
-	HashMap<String, String> logins = new HashMap<String, String>();
-	HashMap<String, String> permissions = new HashMap<String, String>();
+	public static HashMap<String, String> logins = new HashMap<String, String>();
+	public static HashMap<String, String> permissions = new HashMap<String, String>();
 	
 	public static final String ADMIN = "A";
 	public static final String SELLER = "S";
@@ -19,11 +19,11 @@ public class Login {
 	}
 	
 	public void addLogin(String login, String passwd){
-		logins.put(login, passwd);
+		Login.logins.put(login, passwd);
 	}
 	
 	public void removeLogin(String login){
-		logins.remove(login);
+		Login.logins.remove(login);
 	}
 
 	public HashMap<String, String> getPermissions() {
@@ -35,11 +35,11 @@ public class Login {
 	}
 	
 	public void addPermission(String login, String permission){
-		permissions.put(login, permission);
+		Login.permissions.put(login, permission);
 	}
 	
 	public void removePermission(String login){
-		permissions.remove(login);
+		Login.permissions.remove(login);
 	}
 
 }

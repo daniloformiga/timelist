@@ -1,13 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+    <string name="menuPrincipal">Menu Principal</string>
+    <string name="menuSeller">Menu Vendedor</string>
+    <string name="addClient">Cadastrar Cliente</string>
+    <string name="menuUsers">Gerenciar Usuários</string>
+    <string name="addUser">Cadastrar Usuário</string>
 
     <string name="app_name">TimeList</string>
     <string name="action_settings">Configurações</string>
     <string name="login">Login</string>
     <string name="password">Senha</string>
     <string name="buttonEnter">Entrar</string>
-    <string name="menuPrincipal">Menu Principal</string>
-    <string name="menuSeller">Menu Vendedor</string>
+    <string name="buttonExit">Sair</string>
+    <string name="buttonSave">Salvar</string>
+    <string name="buttonCancel">Cancelar</string>
+    
+    <string name="titleSistemaDaVez">Sistema da Vez</string>
+    <string name="titleCadastroDeClientes">Cadastro de Clientes</string>
+    <string name="titleMarketingAtivo">Marketing Ativo</string>
+    <string name="titleRankingVendedores">Ranking de Vendedores</string>
+    <string name="titleManagerUsers">Gerenciador de Usuários</string>
+    <string name="titleManagerReports">Gerenciador de Relatórios</string>
+ 
+    <string name="textAddUser">Adicionar Usuário</string>
+    <string name="textRemoveUser">Remover Usuário</string>
+    <string name="textEditUser">Editar Usuário</string>
+    <string name="textListUsers">Listar Usuários</string>
+    
     <color name="gray">#484848</color>
+    <color name="white">#FFFFFF</color>
+    
+    <string name="hintName">Nome</string>
+    <string name="hintPhone">Telefone</string>
+    <string name="hintMail">Email</string>
+    <string name="hintFacebook">Facebook</string>
+    <string name="hintInstagram">Instagram</string>
+    <string name="hintBirthday">Aniversário</string>
+    <string name="hintObs">Observação</string>
+    <string name="hintSeller">Vendedor</string>
+    <string name="hintLogin">Login</string>
+    <string name="hintPasswd">Senha</string>
+    
+    <string name="funcao">Função</string>
+    
+    <string-array name="permissions_list">
+       <item>Admin</item>
+       <item>Vendedor</item>
+    </string-array>
 
 </resources>

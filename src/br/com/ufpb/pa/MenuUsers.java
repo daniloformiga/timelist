@@ -8,36 +8,26 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class MenuSeller extends Activity {
+public class MenuUsers extends Activity {
 	
-	TextView buttonAddClient;
-	TextView buttonExit;
-
+	TextView buttonAddUser;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.menu_seller);
+		setContentView(R.layout.menu_users);
 		
-		buttonAddClient = (TextView) findViewById(R.id.textCadastro);
-		buttonExit = (TextView) findViewById(R.id.buttonExit);
+		buttonAddUser = (TextView) findViewById(R.id.textAddUser);
 		
-		buttonAddClient.setOnClickListener(new OnClickListener() {
+		buttonAddUser.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
-				Intent intent = new Intent(MenuSeller.this, AddClient.class);
+				Intent intent = new Intent(MenuUsers.this, AddUser.class);
         		startActivity(intent);
 			}
 		});
 		
-		buttonExit.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(MenuSeller.this, MainActivity.class);
-        		startActivity(intent);
-			}
-		});
 	}
 
 	@Override

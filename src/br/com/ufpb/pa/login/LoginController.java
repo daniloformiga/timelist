@@ -5,7 +5,7 @@ public class LoginController {
 	
 	Login login = new Login();
 	
-	public void makeLogin(){
+	public LoginController(){
 		
 		login.addLogin("admin", "admin");
 		login.addPermission("admin", Login.ADMIN);
@@ -16,17 +16,26 @@ public class LoginController {
 	
 	public boolean verify(String loginText, String passwd){
 				
-		String loginExists = login.getLogins().get(loginText);
-		
-		if(loginExists.equalsIgnoreCase("")){
+		if(loginText == null || loginText.equalsIgnoreCase("")){
 			return false;
 		}else{
-			if(loginExists.equalsIgnoreCase(passwd)){
-				return true;
+			
+			String loginExists = Login.logins.get(loginText);
+			
+			if(loginExists != null){
+						
+				if(loginExists.equalsIgnoreCase(passwd)){
+					return true;
+				}else{
+					return false;
+				}
+				
 			}else{
 				return false;
 			}
+			
 		}
+		
 	}
 	
 	public String verifyPermission(String loginText){

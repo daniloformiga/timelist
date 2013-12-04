@@ -8,10 +8,14 @@
 package br.com.ufpb.pa;
 
 public final class R {
+    public static final class array {
+        public static final int permissions_list=0x7f070000;
+    }
     public static final class attr {
     }
     public static final class color {
         public static final int gray=0x7f060000;
+        public static final int white=0x7f060001;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -28,27 +32,81 @@ public final class R {
         public static final int ic_menu=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090003;
-        public static final int buttonEnter=0x7f090002;
-        public static final int login=0x7f090001;
-        public static final int password=0x7f090000;
+        public static final int action_settings=0x7f0a001b;
+        public static final int buttonEnter=0x7f0a0002;
+        public static final int buttonExit=0x7f0a0016;
+        public static final int buttonSave=0x7f0a000b;
+        public static final int buttonSaveUser=0x7f0a000c;
+        public static final int login=0x7f0a0001;
+        public static final int password=0x7f0a0000;
+        public static final int spinner1=0x7f0a000d;
+        public static final int textAddUser=0x7f0a0017;
+        public static final int textBirthday=0x7f0a0008;
+        public static final int textCadastro=0x7f0a0015;
+        public static final int textEditUser=0x7f0a0019;
+        public static final int textFacebook=0x7f0a0006;
+        public static final int textInstagram=0x7f0a0007;
+        public static final int textListUser=0x7f0a001a;
+        public static final int textLogin=0x7f0a000e;
+        public static final int textMail=0x7f0a0005;
+        public static final int textManagerReports=0x7f0a0011;
+        public static final int textManagerUsers=0x7f0a0010;
+        public static final int textMarketing=0x7f0a0013;
+        public static final int textName=0x7f0a0004;
+        public static final int textObs=0x7f0a0009;
+        public static final int textPasswd=0x7f0a000f;
+        public static final int textPhone=0x7f0a0003;
+        public static final int textRanking=0x7f0a0012;
+        public static final int textRemoveUser=0x7f0a0018;
+        public static final int textSeller=0x7f0a000a;
+        public static final int textSistemaDaVez=0x7f0a0014;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int menu_principal=0x7f030001;
-        public static final int menu_seller=0x7f030002;
+        public static final int add_client=0x7f030001;
+        public static final int add_user=0x7f030002;
+        public static final int menu_principal=0x7f030003;
+        public static final int menu_seller=0x7f030004;
+        public static final int menu_users=0x7f030005;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int buttonEnter=0x7f050004;
-        public static final int login=0x7f050002;
-        public static final int menuPrincipal=0x7f050005;
-        public static final int menuSeller=0x7f050006;
-        public static final int password=0x7f050003;
+        public static final int action_settings=0x7f050006;
+        public static final int addClient=0x7f050002;
+        public static final int addUser=0x7f050004;
+        public static final int app_name=0x7f050005;
+        public static final int buttonCancel=0x7f05000c;
+        public static final int buttonEnter=0x7f050009;
+        public static final int buttonExit=0x7f05000a;
+        public static final int buttonSave=0x7f05000b;
+        public static final int funcao=0x7f050021;
+        public static final int hintBirthday=0x7f05001c;
+        public static final int hintFacebook=0x7f05001a;
+        public static final int hintInstagram=0x7f05001b;
+        public static final int hintLogin=0x7f05001f;
+        public static final int hintMail=0x7f050019;
+        public static final int hintName=0x7f050017;
+        public static final int hintObs=0x7f05001d;
+        public static final int hintPasswd=0x7f050020;
+        public static final int hintPhone=0x7f050018;
+        public static final int hintSeller=0x7f05001e;
+        public static final int login=0x7f050007;
+        public static final int menuPrincipal=0x7f050000;
+        public static final int menuSeller=0x7f050001;
+        public static final int menuUsers=0x7f050003;
+        public static final int password=0x7f050008;
+        public static final int textAddUser=0x7f050013;
+        public static final int textEditUser=0x7f050015;
+        public static final int textListUsers=0x7f050016;
+        public static final int textRemoveUser=0x7f050014;
+        public static final int titleCadastroDeClientes=0x7f05000e;
+        public static final int titleManagerReports=0x7f050012;
+        public static final int titleManagerUsers=0x7f050011;
+        public static final int titleMarketingAtivo=0x7f05000f;
+        public static final int titleRankingVendedores=0x7f050010;
+        public static final int titleSistemaDaVez=0x7f05000d;
     }
     public static final class style {
         /** 
@@ -72,10 +130,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f080001;
     }
 }
