@@ -34,5 +34,14 @@
         android:text="@string/titleManagerReports"
         android:textColor="@color/white"
         android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonBackMenuPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textManagerReports"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:text="@string/buttonBack" />
     
 </RelativeLayout>

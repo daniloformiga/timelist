@@ -9,16 +9,6 @@
     tools:context=".MenuPrincipal" 
     android:background="@color/gray" >
 
-    <Button
-        android:id="@+id/buttonSaveUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
-        android:text="@string/buttonSave"
-         />
-
     <EditText
         android:id="@+id/textLogin"
         android:layout_width="wrap_content"
@@ -51,5 +41,25 @@
         android:layout_marginTop="31dp"
         android:entries="@array/permissions_list"
         android:prompt="@string/funcao" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonSaveUser"
+        android:layout_alignBottom="@+id/buttonSaveUser"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/buttonSaveUser"
+        android:text="@string/buttonBack" />
+
+    <Button
+        android:id="@+id/buttonSaveUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner1"
+        android:layout_below="@+id/spinner1"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/buttonSave" />
     
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package br.com.ufpb.pa;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -18,6 +19,7 @@ public class AddUser extends Activity {
 	EditText textLogin;
 	EditText textPasswd;
 	Spinner permission;
+	Button buttonBack;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +27,20 @@ public class AddUser extends Activity {
 		setContentView(R.layout.add_user);
 		
 		buttonSave = (Button) findViewById(R.id.buttonSaveUser);
+		buttonBack = (Button) findViewById(R.id.buttonBack);
 		textLogin = (EditText) findViewById(R.id.textLogin);
 		textPasswd = (EditText) findViewById(R.id.textPasswd);
 		permission = (Spinner) findViewById(R.id.spinner1);
+		
+		buttonBack.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(AddUser.this, MenuUsers.class);
+        		startActivity(intent);
+				
+			}
+		});
 		
 		
 		buttonSave.setOnClickListener(new OnClickListener() {

@@ -23,40 +23,19 @@
             </intent-filter>
         </activity>
         
-        <activity
-            
-            android:name="MenuPrincipal"
-            android:label="@string/menuPrincipal"
-           
-        />
+        <activity android:name="MenuPrincipal" android:label="@string/menuPrincipal" />
         
-        <activity
-            
-            android:name="MenuSeller"
-            android:label="@string/menuSeller"
-           
-        />
+        <activity android:name="MenuSeller" android:label="@string/menuSeller" />
         
-        <activity
-            
-            android:name="AddClient"
-            android:label="@string/addClient"
-           
-        />
+        <activity android:name="AddClient" android:label="@string/addClient" />
         
-        <activity
-            
-            android:name="MenuUsers"
-            android:label="@string/menuUsers"
-           
-        />
+        <activity android:name="MenuUsers" android:label="@string/menuUsers" />
         
-        <activity
-            
-            android:name="AddUser"
-            android:label="@string/addUser"
-           
-        />
+        <activity android:name="AddUser" android:label="@string/addUser" />
+        
+        <activity android:name="TimeList" android:label="@string/timeList"  />
+        
+        <activity android:name="MenuReports" android:label="@string/menuReports"  />
         
     </application>
 

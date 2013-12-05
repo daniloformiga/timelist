@@ -6,6 +6,8 @@
     <string name="addClient">Cadastrar Cliente</string>
     <string name="menuUsers">Gerenciar Usuários</string>
     <string name="addUser">Cadastrar Usuário</string>
+    <string name="timeList">Sistema da Vez</string>
+    <string name="menuReports">Gerenciador de Relatórios</string>
 
     <string name="app_name">TimeList</string>
     <string name="action_settings">Configurações</string>
@@ -15,6 +17,7 @@
     <string name="buttonExit">Sair</string>
     <string name="buttonSave">Salvar</string>
     <string name="buttonCancel">Cancelar</string>
+    <string name="buttonBack">Voltar</string>
     
     <string name="titleSistemaDaVez">Sistema da Vez</string>
     <string name="titleCadastroDeClientes">Cadastro de Clientes</string>
@@ -22,6 +25,10 @@
     <string name="titleRankingVendedores">Ranking de Vendedores</string>
     <string name="titleManagerUsers">Gerenciador de Usuários</string>
     <string name="titleManagerReports">Gerenciador de Relatórios</string>
+    <string name="titleSellersDay">Vendas do Dia</string>
+    <string name="titleSellerMonth">Vendas do Mês</string>
+    <string name="titleSellerYear">Vendas do Ano</string>
+    <string name="titleClientSeller">Clientes por Vendedor</string>
  
     <string name="textAddUser">Adicionar Usuário</string>
     <string name="textRemoveUser">Remover Usuário</string>

@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MenuPrincipal extends Activity {
 
 	TextView buttonManagerUsers;
 	TextView buttonManagerReports;
+	Button buttonBack;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,17 @@ public class MenuPrincipal extends Activity {
 		
 		buttonManagerUsers = (TextView) findViewById(R.id.textManagerUsers);
 		buttonManagerReports = (TextView) findViewById(R.id.textManagerReports);
+		buttonBack = (Button) findViewById(R.id.buttonBackMenuPrincipal);
+		
+		buttonBack.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MenuPrincipal.this, MenuUsers.class);
+        		startActivity(intent);
+				
+			}
+		});
 		
 		buttonManagerUsers.setOnClickListener(new OnClickListener() {
 			
@@ -27,6 +40,16 @@ public class MenuPrincipal extends Activity {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(MenuPrincipal.this, MenuUsers.class);
         		startActivity(intent);
+			}
+		});
+		
+		buttonManagerReports.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MenuPrincipal.this, MenuReports.class);
+        		startActivity(intent);
+				
 			}
 		});
 	}

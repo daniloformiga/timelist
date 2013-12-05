@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class MenuSeller extends Activity {
 	
 	TextView buttonAddClient;
+	TextView buttonTimeList;
 	Button buttonExit;
 
 	@Override
@@ -20,6 +21,7 @@ public class MenuSeller extends Activity {
 		setContentView(R.layout.menu_seller);
 		
 		buttonAddClient = (TextView) findViewById(R.id.textCadastro);
+		buttonTimeList = (TextView) findViewById(R.id.textSistemaDaVez);
 		buttonExit = (Button) findViewById(R.id.buttonExit);
 		
 		buttonAddClient.setOnClickListener(new OnClickListener() {
@@ -28,6 +30,16 @@ public class MenuSeller extends Activity {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(MenuSeller.this, AddClient.class);
         		startActivity(intent);
+			}
+		});
+		
+		buttonTimeList.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(MenuSeller.this, TimeList.class);
+        		startActivity(intent);
+				
 			}
 		});
 		
