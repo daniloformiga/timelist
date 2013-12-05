@@ -9,50 +9,6 @@
     tools:context=".MenuSeller" 
     android:background="@color/gray" >
 
-    <TextView
-        android:id="@+id/textRanking"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textMarketing"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textMarketing"
-        android:layout_marginTop="41dp"
-        android:text="@string/titleRankingVendedores"
-        android:textColor="@color/white"
-        android:textSize="23sp" />
-
-    <TextView
-        android:id="@+id/textSistemaDaVez"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textCadastro"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp"
-        android:text="@string/titleSistemaDaVez"
-        android:textColor="@color/white"
-        android:textSize="23sp" />
-
-    <TextView
-        android:id="@+id/textMarketing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textCadastro"
-        android:layout_centerVertical="true"
-        android:text="@string/titleMarketingAtivo"
-        android:textColor="@color/white"
-        android:textSize="23sp" />
-
-    <TextView
-        android:id="@+id/textCadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textMarketing"
-        android:layout_alignLeft="@+id/textSistemaDaVez"
-        android:layout_marginBottom="44dp"
-        android:text="@string/titleCadastroDeClientes"
-        android:textColor="@color/white"
-        android:textSize="23sp" />
-
     <Button
         android:id="@+id/buttonExit"
         android:layout_width="wrap_content"
@@ -61,5 +17,56 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="31dp"
         android:text="@string/buttonExit" />
+
+    <TextView
+        android:id="@+id/textMarketing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textRanking"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/ic_marketingativo"
+        android:gravity="center"
+        android:text="@string/titleMarketingAtivo"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textMarketing"
+        android:layout_alignLeft="@+id/textMarketing"
+        android:layout_marginBottom="36dp"
+        android:drawableLeft="@drawable/ic_addclient"
+        android:gravity="center"
+        android:text="@string/titleCadastroDeClientes"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textSistemaDaVez"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textCadastro"
+        android:layout_alignLeft="@+id/textCadastro"
+        android:layout_marginBottom="30dp"
+        android:drawableLeft="@drawable/ic_sistemadavez"
+        android:gravity="center"
+        android:text="@string/titleSistemaDaVez"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textRanking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textMarketing"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:drawableLeft="@drawable/ic_rankingvendedores"
+        android:gravity="center"
+        android:text="@string/titleRankingVendedores"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
     
 </RelativeLayout>

@@ -10,17 +10,6 @@
     android:background="@color/gray" >
 
     <TextView
-        android:id="@+id/textAddUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp"
-        android:text="@string/textAddUser"
-        android:textColor="@color/white"
-        android:textSize="22sp" />
-
-    <TextView
         android:id="@+id/textRemoveUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +18,9 @@
         android:layout_marginTop="41dp"
         android:text="@string/textRemoveUser"
         android:textColor="@color/white"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/ic_removeuser"
+        android:gravity="center"  />
 
     <TextView
         android:id="@+id/textEditUser"
@@ -40,7 +31,9 @@
         android:layout_marginTop="44dp"
         android:text="@string/textEditUser"
         android:textColor="@color/white"
-        android:textSize="22sp" />
+        android:textSize="22sp" 
+        android:drawableLeft="@drawable/ic_edituser"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/textListUser"
@@ -50,6 +43,21 @@
         android:layout_below="@+id/textEditUser"
         android:layout_marginTop="46dp"
         android:text="@string/textListUsers"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/ic_listuser"
+        android:gravity="center"  />
+
+    <TextView
+        android:id="@+id/textAddUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:drawableLeft="@drawable/ic_adduser"
+        android:gravity="center"
+        android:text="@string/textAddUser"
         android:textColor="@color/white"
         android:textSize="22sp" />
     

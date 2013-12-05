@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MenuSeller extends Activity {
 	
 	TextView buttonAddClient;
-	TextView buttonExit;
+	Button buttonExit;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +20,7 @@ public class MenuSeller extends Activity {
 		setContentView(R.layout.menu_seller);
 		
 		buttonAddClient = (TextView) findViewById(R.id.textCadastro);
-		buttonExit = (TextView) findViewById(R.id.buttonExit);
+		buttonExit = (Button) findViewById(R.id.buttonExit);
 		
 		buttonAddClient.setOnClickListener(new OnClickListener() {
 			

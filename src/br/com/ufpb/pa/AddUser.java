@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.textservice.TextServicesManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -34,22 +35,32 @@ public class AddUser extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				
-				Login.logins.put(textLogin.getText().toString(), textPasswd.getText().toString());
+				if(textLogin.getText().toString().equalsIgnoreCase("")){
+					String text = "Preencha o usuário corretamente!";
+					Toast tempMessage = Toast.makeText(getApplicationContext(), text,Toast.LENGTH_SHORT);
+					tempMessage.show();
+				}else if(textPasswd.getText().toString().equalsIgnoreCase("")){
+					String text = "Preencha a senha corretamente!";
+					Toast tempMessage = Toast.makeText(getApplicationContext(), text,Toast.LENGTH_SHORT);
+					tempMessage.show();
+				}else{
+					
+					Login.logins.put(textLogin.getText().toString(), textPasswd.getText().toString());
+					
+					if(permission.getSelectedItem().toString().equalsIgnoreCase("admin")){
+						Login.permissions.put(textLogin.getText().toString(), Login.ADMIN);
+					}
+					else if(permission.getSelectedItem().toString().equalsIgnoreCase("vendedor")){
+						Login.permissions.put(textLogin.getText().toString(), Login.SELLER);
+					}
+					
+					textLogin.setText("");
+					textPasswd.setText("");
+					String text = "Usuário cadastrado com Sucesso!";
+					Toast tempMessage = Toast.makeText(getApplicationContext(), text,Toast.LENGTH_SHORT);
+					tempMessage.show();
 				
-				if(permission.getSelectedItem().toString().equalsIgnoreCase("admin")){
-					Login.permissions.put(textLogin.getText().toString(), Login.ADMIN);
 				}
-				else if(permission.getSelectedItem().toString().equalsIgnoreCase("vendedor")){
-					Login.permissions.put(textLogin.getText().toString(), Login.SELLER);
-				}
-				
-				textLogin.setText("");
-				textPasswd.setText("");
-				String text = "Usuário cadastrado com Sucesso!";
-				Toast tempMessage = Toast.makeText(getApplicationContext(), text,Toast.LENGTH_SHORT);
-				tempMessage.show();
-				
-				
 				
 			}
 		});

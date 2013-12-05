@@ -13,22 +13,26 @@
         android:id="@+id/textManagerUsers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="119dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="113dp"
+        android:drawableLeft="@drawable/ic_loginmanager"
         android:text="@string/titleManagerUsers"
         android:textColor="@color/white"
-        android:textSize="23sp" />
+        android:textSize="20sp"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/textManagerReports"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textManagerUsers"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/textManagerUsers"
-        android:layout_marginTop="83dp"
+        android:layout_marginTop="72dp"
+        android:drawableLeft="@drawable/ic_managerreport"
+        android:gravity="center"
         android:text="@string/titleManagerReports"
         android:textColor="@color/white"
-        android:textSize="22sp" />
+        android:textSize="20sp" />
     
 </RelativeLayout>

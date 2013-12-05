@@ -28,38 +28,51 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int ic_menu=0x7f020001;
+        public static final int ic_addclient=0x7f020000;
+        public static final int ic_adduser=0x7f020001;
+        public static final int ic_edituser=0x7f020002;
+        public static final int ic_imageicon=0x7f020003;
+        public static final int ic_imagelogo=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int ic_listuser=0x7f020006;
+        public static final int ic_loginmanager=0x7f020007;
+        public static final int ic_managerreport=0x7f020008;
+        public static final int ic_marketingativo=0x7f020009;
+        public static final int ic_menu=0x7f02000a;
+        public static final int ic_rankingvendedores=0x7f02000b;
+        public static final int ic_removeuser=0x7f02000c;
+        public static final int ic_sistemadavez=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a001b;
+        public static final int action_settings=0x7f0a001c;
         public static final int buttonEnter=0x7f0a0002;
-        public static final int buttonExit=0x7f0a0016;
-        public static final int buttonSave=0x7f0a000b;
-        public static final int buttonSaveUser=0x7f0a000c;
+        public static final int buttonExit=0x7f0a0013;
+        public static final int buttonSave=0x7f0a000c;
+        public static final int buttonSaveUser=0x7f0a000d;
+        public static final int imageLogo=0x7f0a0003;
         public static final int login=0x7f0a0001;
         public static final int password=0x7f0a0000;
-        public static final int spinner1=0x7f0a000d;
-        public static final int textAddUser=0x7f0a0017;
-        public static final int textBirthday=0x7f0a0008;
-        public static final int textCadastro=0x7f0a0015;
-        public static final int textEditUser=0x7f0a0019;
-        public static final int textFacebook=0x7f0a0006;
-        public static final int textInstagram=0x7f0a0007;
-        public static final int textListUser=0x7f0a001a;
-        public static final int textLogin=0x7f0a000e;
-        public static final int textMail=0x7f0a0005;
-        public static final int textManagerReports=0x7f0a0011;
-        public static final int textManagerUsers=0x7f0a0010;
-        public static final int textMarketing=0x7f0a0013;
-        public static final int textName=0x7f0a0004;
-        public static final int textObs=0x7f0a0009;
-        public static final int textPasswd=0x7f0a000f;
-        public static final int textPhone=0x7f0a0003;
-        public static final int textRanking=0x7f0a0012;
+        public static final int spinner1=0x7f0a000e;
+        public static final int textAddUser=0x7f0a0019;
+        public static final int textBirthday=0x7f0a0009;
+        public static final int textCadastro=0x7f0a0016;
+        public static final int textEditUser=0x7f0a001a;
+        public static final int textFacebook=0x7f0a0007;
+        public static final int textInstagram=0x7f0a0008;
+        public static final int textListUser=0x7f0a001b;
+        public static final int textLogin=0x7f0a000f;
+        public static final int textMail=0x7f0a0006;
+        public static final int textManagerReports=0x7f0a0012;
+        public static final int textManagerUsers=0x7f0a0011;
+        public static final int textMarketing=0x7f0a0014;
+        public static final int textName=0x7f0a0005;
+        public static final int textObs=0x7f0a000a;
+        public static final int textPasswd=0x7f0a0010;
+        public static final int textPhone=0x7f0a0004;
+        public static final int textRanking=0x7f0a0015;
         public static final int textRemoveUser=0x7f0a0018;
-        public static final int textSeller=0x7f0a000a;
-        public static final int textSistemaDaVez=0x7f0a0014;
+        public static final int textSeller=0x7f0a000b;
+        public static final int textSistemaDaVez=0x7f0a0017;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

@@ -27,7 +27,6 @@ public class MainActivity extends Activity {
 		passwdText = (EditText) findViewById(R.id.password);
 		Button btnEntrar = (Button) findViewById(R.id.buttonEnter);
 		
-		
 		btnEntrar.setOnClickListener(new OnClickListener() {
 			
 			@Override
