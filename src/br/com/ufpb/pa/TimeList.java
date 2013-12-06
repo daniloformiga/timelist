@@ -63,6 +63,9 @@ public class TimeList extends Activity {
                  
                  // ListView Clicked item value
                  String itemValue = (String) listView.getItemAtPosition(position);
+                 
+                 Intent intent = new Intent(TimeList.this, ConfirmPasswd.class);
+	        	 startActivity(intent);
                     
                   // Show Alert 
                   /*Toast.makeText(getApplicationContext(),

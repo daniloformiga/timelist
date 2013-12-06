@@ -8,6 +8,13 @@
     <string name="addUser">Cadastrar Usuário</string>
     <string name="timeList">Sistema da Vez</string>
     <string name="menuReports">Gerenciador de Relatórios</string>
+    <string name="sellerDecision">Resultado do atendimento</string>
+    <string name="confirmPassword">Confirme sua senha</string>
+    <string name="subTotal">Informações da Venda</string>
+    <string name="removeUser">Remover Usuário</string>
+    <string name="editUser">Editar Usuário</string>
+    <string name="listUser">Listar Usuário</string>
+    
 
     <string name="app_name">TimeList</string>
     <string name="action_settings">Configurações</string>
@@ -18,6 +25,7 @@
     <string name="buttonSave">Salvar</string>
     <string name="buttonCancel">Cancelar</string>
     <string name="buttonBack">Voltar</string>
+    <string name="buttonRemove">Remover</string>
     
     <string name="titleSistemaDaVez">Sistema da Vez</string>
     <string name="titleCadastroDeClientes">Cadastro de Clientes</string>
@@ -29,6 +37,11 @@
     <string name="titleSellerMonth">Vendas do Mês</string>
     <string name="titleSellerYear">Vendas do Ano</string>
     <string name="titleClientSeller">Clientes por Vendedor</string>
+    <string name="titleYesSeller">Vendi</string>
+    <string name="titleNoSellerr">Não Vendi</string>
+    <string name="titleIexit">Sai</string>
+    <string name="titleIback">Voltei</string>
+    <string name="titleEditUser">Editar</string>
  
     <string name="textAddUser">Adicionar Usuário</string>
     <string name="textRemoveUser">Remover Usuário</string>
@@ -48,12 +61,23 @@
     <string name="hintSeller">Vendedor</string>
     <string name="hintLogin">Login</string>
     <string name="hintPasswd">Senha</string>
+    <string name="hintQuantitySubTotal">Quantidade Vendida</string>
+    <string name="hintValueSubTotal">Valor Total</string>
+    <string name="hintNewPasswd">Nova Senha</string>
     
     <string name="funcao">Função</string>
+    <string name="paymentForm">Forma de Pagamento</string>
     
     <string-array name="permissions_list">
        <item>Admin</item>
        <item>Vendedor</item>
+    </string-array>
+    
+    <string-array name="paymentform_list">
+       <item>Dinheiro</item>
+       <item>Cartão</item>
+       <item>Cheque</item>
+       <item>Transferência</item>
     </string-array>
 
 </resources>

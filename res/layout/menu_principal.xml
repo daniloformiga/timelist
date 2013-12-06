@@ -22,19 +22,6 @@
         android:textSize="20sp"
         android:gravity="center" />
 
-    <TextView
-        android:id="@+id/textManagerReports"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textManagerUsers"
-        android:layout_marginTop="72dp"
-        android:drawableLeft="@drawable/ic_managerreport"
-        android:gravity="center"
-        android:text="@string/titleManagerReports"
-        android:textColor="@color/white"
-        android:textSize="20sp" />
-
     <Button
         android:id="@+id/buttonBackMenuPrincipal"
         android:layout_width="wrap_content"
@@ -43,5 +30,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp"
         android:text="@string/buttonBack" />
+
+    <TextView
+        android:id="@+id/textManagerReports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/ic_managerreport"
+        android:gravity="center"
+        android:text="@string/titleManagerReports"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
     
 </RelativeLayout>

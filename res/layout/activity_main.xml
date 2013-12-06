@@ -28,7 +28,13 @@
         android:layout_alignRight="@+id/password"
         android:layout_marginTop="138dp"
         android:ems="10"
-        android:hint="@string/login" />
+        android:hint="@string/login" >
+
+        <requestFocus />
+
+        <requestFocus />
+
+    </EditText>
 
     <Button
         android:id="@+id/buttonEnter"

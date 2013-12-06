@@ -6,11 +6,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MenuUsers extends Activity {
 	
 	TextView buttonAddUser;
+	TextView buttonRemoveUser;
+	TextView buttonEditUser;
+	TextView buttonListUser;
+	Button buttonExit;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +23,10 @@ public class MenuUsers extends Activity {
 		setContentView(R.layout.menu_users);
 		
 		buttonAddUser = (TextView) findViewById(R.id.textAddUser);
+		buttonRemoveUser = (TextView) findViewById(R.id.textRemoveUser);
+		buttonEditUser = (TextView) findViewById(R.id.textEditUser);
+		buttonListUser = (TextView) findViewById(R.id.textListUser);
+		buttonExit = (Button) findViewById(R.id.buttonExitMenuUser);
 		
 		buttonAddUser.setOnClickListener(new OnClickListener() {
 			
@@ -25,6 +34,46 @@ public class MenuUsers extends Activity {
 			public void onClick(View arg0) {
 				Intent intent = new Intent(MenuUsers.this, AddUser.class);
         		startActivity(intent);
+			}
+		});
+		
+		buttonRemoveUser.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(MenuUsers.this, RemoveUser.class);
+				startActivity(intent);
+				
+			}
+		});
+		
+		buttonEditUser.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(MenuUsers.this, EditUser.class);
+				startActivity(intent);
+				
+			}
+		});
+		
+		buttonListUser.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(MenuUsers.this, ListUser.class);
+				startActivity(intent);
+				
+			}
+		});
+		
+		buttonExit.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(MenuUsers.this, MainActivity.class);
+				startActivity(intent);
+				
 			}
 		});
 		

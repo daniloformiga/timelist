@@ -37,6 +37,18 @@
         
         <activity android:name="MenuReports" android:label="@string/menuReports"  />
         
+        <activity android:name="SellerDecision" android:label="@string/sellerDecision"  />
+        
+        <activity android:name="ConfirmPasswd" android:label="@string/confirmPassword"  />
+        
+        <activity android:name="SubTotal" android:label="@string/subTotal"  />
+        
+        <activity android:name="RemoveUser" android:label="@string/removeUser"  />
+        
+        <activity android:name="EditUser" android:label="@string/editUser"  />
+        
+        <activity android:name="ListUser" android:label="@string/listUser"  />
+        
     </application>
 
 </manifest>

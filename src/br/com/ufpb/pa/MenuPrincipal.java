@@ -28,7 +28,7 @@ public class MenuPrincipal extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(MenuPrincipal.this, MenuUsers.class);
+				Intent intent = new Intent(MenuPrincipal.this, MainActivity.class);
         		startActivity(intent);
 				
 			}

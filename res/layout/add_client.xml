@@ -89,21 +89,21 @@
     </EditText>
 
     <Button
-        android:id="@+id/buttonBackTimeList"
+        android:id="@+id/buttonBackAddClient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/textSeller"
         android:layout_below="@+id/textSeller"
         android:layout_marginRight="26dp"
         android:layout_marginTop="16dp"
-        android:text="@string/buttonCancel" />
+        android:text="@string/buttonBack" />
 
     <Button
-        android:id="@+id/buttonSaveUser"
+        android:id="@+id/buttonSaveClient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/buttonBackTimeList"
-        android:layout_alignBottom="@+id/buttonBackTimeList"
+        android:layout_alignBaseline="@+id/buttonBackAddClient"
+        android:layout_alignBottom="@+id/buttonBackAddClient"
         android:layout_alignLeft="@+id/textSeller"
         android:layout_marginLeft="16dp"
         android:text="@string/buttonSave" />
