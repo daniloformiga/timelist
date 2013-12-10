@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 import br.com.ufpb.pa.login.Login;
 import br.com.ufpb.pa.login.LoginController;
+import br.com.ufpb.pa.menu.MenuPrincipal;
+import br.com.ufpb.pa.menu.MenuSeller;
 
 public class MainActivity extends Activity {
 

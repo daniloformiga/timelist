@@ -16,6 +16,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import br.com.ufpb.pa.login.ConfirmPasswd;
+import br.com.ufpb.pa.menu.MenuSeller;
 
 public class TimeList extends Activity {
 	

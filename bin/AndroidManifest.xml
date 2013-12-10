@@ -23,31 +23,31 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="MenuPrincipal" android:label="@string/menuPrincipal" />
-        
-        <activity android:name="MenuSeller" android:label="@string/menuSeller" />
-        
-        <activity android:name="AddClient" android:label="@string/addClient" />
-        
-        <activity android:name="MenuUsers" android:label="@string/menuUsers" />
-        
-        <activity android:name="AddUser" android:label="@string/addUser" />
-        
         <activity android:name="TimeList" android:label="@string/timeList"  />
+                
+        <activity android:name="br.com.ufpb.pa.menu.MenuPrincipal" android:label="@string/menuPrincipal" />
         
-        <activity android:name="MenuReports" android:label="@string/menuReports"  />
+        <activity android:name="br.com.ufpb.pa.menu.MenuSeller" android:label="@string/menuSeller" />
         
-        <activity android:name="SellerDecision" android:label="@string/sellerDecision"  />
+        <activity android:name="br.com.ufpb.pa.menu.MenuUsers" android:label="@string/menuUsers" />
         
-        <activity android:name="ConfirmPasswd" android:label="@string/confirmPassword"  />
+        <activity android:name="br.com.ufpb.pa.menu.MenuReports" android:label="@string/menuReports"  />
         
-        <activity android:name="SubTotal" android:label="@string/subTotal"  />
+        <activity android:name="br.com.ufpb.pa.seller.SellerDecision" android:label="@string/sellerDecision"  />
         
-        <activity android:name="RemoveUser" android:label="@string/removeUser"  />
+        <activity android:name="br.com.ufpb.pa.login.ConfirmPasswd" android:label="@string/confirmPassword"  />
         
-        <activity android:name="EditUser" android:label="@string/editUser"  />
+        <activity android:name="br.com.ufpb.pa.seller.SubTotal" android:label="@string/subTotal"  />
         
-        <activity android:name="ListUser" android:label="@string/listUser"  />
+        <activity android:name="br.com.ufpb.pa.client.AddClient" android:label="@string/addClient" />
+        
+        <activity android:name="br.com.ufpb.pa.user.AddUser" android:label="@string/addUser" />
+        
+        <activity android:name="br.com.ufpb.pa.user.RemoveUser" android:label="@string/removeUser"  />
+        
+        <activity android:name="br.com.ufpb.pa.user.EditUser" android:label="@string/editUser"  />
+        
+        <activity android:name="br.com.ufpb.pa.user.ListUser" android:label="@string/listUser"  />
         
     </application>
 

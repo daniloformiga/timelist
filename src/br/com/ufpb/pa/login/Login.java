@@ -4,42 +4,34 @@ import java.util.HashMap;
 
 public class Login {
 	
-	public static HashMap<String, String> logins = new HashMap<String, String>();
-	public static HashMap<String, String> permissions = new HashMap<String, String>();
+	protected static HashMap<String, String> logins = new HashMap<String, String>();
+	protected static HashMap<String, String> permissions = new HashMap<String, String>();
 	
 	public static final String ADMIN = "A";
 	public static final String SELLER = "S";
 
-	public HashMap<String, String> getLogins() {
+	protected static HashMap<String, String> getLogins() {
 		return logins;
 	}
 
-	public void setLogins(HashMap<String, String> logins) {
-		this.logins = logins;
-	}
-	
-	public void addLogin(String login, String passwd){
-		Login.logins.put(login, passwd);
-	}
-	
-	public void removeLogin(String login){
-		Login.logins.remove(login);
-	}
-
-	public HashMap<String, String> getPermissions() {
+	protected static HashMap<String, String> getPermissions() {
 		return permissions;
 	}
-
-	public void setPermissions(HashMap<String, String> permissions) {
-		this.permissions = permissions;
+	
+	protected static void addLogin(String login, String passwd){
+		logins.put(login, passwd);
 	}
 	
-	public void addPermission(String login, String permission){
-		Login.permissions.put(login, permission);
+	protected static void removeLogin(String login){
+		logins.remove(login);
 	}
 	
-	public void removePermission(String login){
-		Login.permissions.remove(login);
+	protected static void addPermission(String login, String permission){
+		permissions.put(login, permission);
+	}
+	
+	protected static void removePermission(String login){
+		permissions.remove(login);
 	}
 
 }
