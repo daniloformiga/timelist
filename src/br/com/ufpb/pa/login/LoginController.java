@@ -2,7 +2,6 @@ package br.com.ufpb.pa.login;
 
 import java.util.HashMap;
 
-
 public class LoginController {
 	
 	public LoginController(){
