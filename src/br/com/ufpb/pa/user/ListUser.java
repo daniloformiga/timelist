@@ -2,9 +2,7 @@ package br.com.ufpb.pa.user;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,17 +16,18 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 import br.com.ufpb.pa.R;
-import br.com.ufpb.pa.R.id;
-import br.com.ufpb.pa.R.layout;
-import br.com.ufpb.pa.R.menu;
+import br.com.ufpb.pa.login.Login;
 import br.com.ufpb.pa.login.LoginController;
 import br.com.ufpb.pa.menu.MenuUsers;
+import br.com.ufpb.pa.persistence.DatabaseHelper;
 
 public class ListUser extends Activity {
 	
 	Button buttonBack;
 	LoginController loginController = new LoginController();
+	DatabaseHelper db = new DatabaseHelper(this);
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,21 +47,11 @@ public class ListUser extends Activity {
 			});
 		
 			final ListView listView = (ListView) findViewById(R.id.listUser);
-		 
-			int contador = 0;
-			String[] values = new String[loginController.getSizeLogin()];
-			
-			Set<String> chaves = loginController.getLogins().keySet();  
-	        for (Iterator<String> iterator = chaves.iterator(); iterator.hasNext();)  
-	        {  
-	        	values[contador] = iterator.next();
-	        	contador++;
-	        }
 
 		    final ArrayList<String> list = new ArrayList<String>();
 		    
-		    for (int i = 0; i < values.length; ++i) {
-		      list.add(values[i]);
+		    for(Login result : db.listarLogins()){
+		    	list.add(result.getLogin());
 		    }
 		    
 		    final StableArrayAdapter adapter = new StableArrayAdapter(this, android.R.layout.simple_list_item_1, list);
@@ -81,10 +70,10 @@ public class ListUser extends Activity {
                  String itemValue = (String) listView.getItemAtPosition(position);
                     
                   // Show Alert 
-                  /*Toast.makeText(getApplicationContext(),
+                  Toast.makeText(getApplicationContext(),
                     "Position :"+itemPosition+" ListItem : " +itemValue , Toast.LENGTH_LONG)
                     .show();
-                   */
+                   
                 }
   
            }); 

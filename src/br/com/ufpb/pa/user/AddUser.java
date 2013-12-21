@@ -17,6 +17,7 @@ import br.com.ufpb.pa.R.menu;
 import br.com.ufpb.pa.login.Login;
 import br.com.ufpb.pa.login.LoginController;
 import br.com.ufpb.pa.menu.MenuUsers;
+import br.com.ufpb.pa.persistence.DatabaseHelper;
 
 public class AddUser extends Activity {
 	
@@ -27,6 +28,7 @@ public class AddUser extends Activity {
 	EditText textPasswd;
 	Spinner permission;
 	Button buttonBack;
+	DatabaseHelper db = new DatabaseHelper(this);
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,9 @@ public class AddUser extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				
+				
+			
+				
 				if(textLogin.getText().toString().equalsIgnoreCase("")){
 					String text = "Preencha o usuário corretamente!";
 					Toast tempMessage = Toast.makeText(getApplicationContext(), text,Toast.LENGTH_SHORT);
@@ -66,10 +71,14 @@ public class AddUser extends Activity {
 				}else{
 					
 					if(permission.getSelectedItem().toString().equalsIgnoreCase("admin")){
-						login.addLogin(textLogin.getText().toString(), textPasswd.getText().toString(), Login.ADMIN);
+						Login loginInsert = new Login(0,textLogin.getText().toString(), textPasswd.getText().toString(), Login.ADMIN);
+						db.insert(loginInsert);
+						//login.addLogin(textLogin.getText().toString(), textPasswd.getText().toString(), Login.ADMIN);
 					}
 					else if(permission.getSelectedItem().toString().equalsIgnoreCase("vendedor")){
-						login.addLogin(textLogin.getText().toString(), textPasswd.getText().toString(), Login.SELLER);
+						Login loginInsert = new Login(0,textLogin.getText().toString(), textPasswd.getText().toString(), Login.SELLER);
+						db.insert(loginInsert);
+						//login.addLogin(textLogin.getText().toString(), textPasswd.getText().toString(), Login.SELLER);
 					}
 					
 					textLogin.setText("");
