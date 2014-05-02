@@ -11,9 +11,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 import br.com.ufpb.pa.R;
 import br.com.ufpb.pa.TimeList;
-import br.com.ufpb.pa.R.id;
-import br.com.ufpb.pa.R.layout;
-import br.com.ufpb.pa.R.menu;
 import br.com.ufpb.pa.seller.SellerDecision;
 
 public class ConfirmPasswd extends Activity {

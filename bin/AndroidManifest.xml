@@ -49,6 +49,8 @@
         
         <activity android:name="br.com.ufpb.pa.user.ListUser" android:label="@string/listUser"  />
         
+        <provider android:authorities="br.com.ufpb.pa.provider.usersprovider" android:name=".UsersProviders"/>
+        
     </application>
 
 </manifest>

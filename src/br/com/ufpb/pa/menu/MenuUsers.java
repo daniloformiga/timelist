@@ -1,14 +1,5 @@
 package br.com.ufpb.pa.menu;
 
-import br.com.ufpb.pa.MainActivity;
-import br.com.ufpb.pa.R;
-import br.com.ufpb.pa.R.id;
-import br.com.ufpb.pa.R.layout;
-import br.com.ufpb.pa.R.menu;
-import br.com.ufpb.pa.user.AddUser;
-import br.com.ufpb.pa.user.EditUser;
-import br.com.ufpb.pa.user.ListUser;
-import br.com.ufpb.pa.user.RemoveUser;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +8,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import br.com.ufpb.pa.MainActivity;
+import br.com.ufpb.pa.R;
+import br.com.ufpb.pa.user.AddUser;
+import br.com.ufpb.pa.user.EditUser;
+import br.com.ufpb.pa.user.ListUser;
+import br.com.ufpb.pa.user.RemoveUser;
 
 public class MenuUsers extends Activity {
 	
@@ -94,4 +91,6 @@ public class MenuUsers extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+	
+	
 }

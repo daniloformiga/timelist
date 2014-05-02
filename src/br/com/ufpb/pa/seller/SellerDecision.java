@@ -1,10 +1,5 @@
 package br.com.ufpb.pa.seller;
 
-import br.com.ufpb.pa.R;
-import br.com.ufpb.pa.TimeList;
-import br.com.ufpb.pa.R.id;
-import br.com.ufpb.pa.R.layout;
-import br.com.ufpb.pa.R.menu;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +7,8 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import br.com.ufpb.pa.R;
+import br.com.ufpb.pa.TimeList;
 
 public class SellerDecision extends Activity {
 

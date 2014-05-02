@@ -1,10 +1,7 @@
 package br.com.ufpb.pa.persistence;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import br.com.ufpb.pa.login.Login;
 
 public class DBAdapter {
 	

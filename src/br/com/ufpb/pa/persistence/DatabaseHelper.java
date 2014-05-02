@@ -13,7 +13,7 @@ import br.com.ufpb.pa.login.Login;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-	private static final String DATABASE_NAME = "timelistOficial.db";
+	public static final String DATABASE_NAME = "timelistOficial.db";
 	public static final String TABLE_NAME = "T_Login";
 	private static final int DATABASE_VERSION = 1;
 	public static final String ID = "_id";

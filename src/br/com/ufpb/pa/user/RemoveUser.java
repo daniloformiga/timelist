@@ -10,9 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import br.com.ufpb.pa.R;
-import br.com.ufpb.pa.R.id;
-import br.com.ufpb.pa.R.layout;
-import br.com.ufpb.pa.R.menu;
 import br.com.ufpb.pa.login.LoginController;
 import br.com.ufpb.pa.menu.MenuUsers;
 

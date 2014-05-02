@@ -1,6 +1,7 @@
 package br.com.ufpb.pa.user;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,13 +12,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 import br.com.ufpb.pa.R;
-import br.com.ufpb.pa.R.id;
-import br.com.ufpb.pa.R.layout;
-import br.com.ufpb.pa.R.menu;
 import br.com.ufpb.pa.login.Login;
 import br.com.ufpb.pa.login.LoginController;
 import br.com.ufpb.pa.menu.MenuUsers;
 import br.com.ufpb.pa.persistence.DatabaseHelper;
+import br.com.ufpb.pa.provider.UsersProvider;
 
 public class AddUser extends Activity {
 	
@@ -56,9 +55,6 @@ public class AddUser extends Activity {
 			
 			@Override
 			public void onClick(View arg0) {
-				
-				
-			
 				
 				if(textLogin.getText().toString().equalsIgnoreCase("")){
 					String text = "Preencha o usuário corretamente!";
@@ -100,4 +96,5 @@ public class AddUser extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+
 }

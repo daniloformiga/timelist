@@ -1,10 +1,5 @@
 package br.com.ufpb.pa.user;
 
-import br.com.ufpb.pa.R;
-import br.com.ufpb.pa.R.id;
-import br.com.ufpb.pa.R.layout;
-import br.com.ufpb.pa.R.menu;
-import br.com.ufpb.pa.menu.MenuUsers;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+import br.com.ufpb.pa.R;
+import br.com.ufpb.pa.menu.MenuUsers;
 
 public class EditUser extends Activity {
 	
