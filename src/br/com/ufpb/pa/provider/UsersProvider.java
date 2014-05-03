@@ -30,7 +30,7 @@ public class UsersProvider extends ContentProvider{
 	
 	private static final String END = "br.com.ufpb.pa.provider.UsersProvider";
 	
-	public static final Uri CONTENT_URI = Uri.parse("content://"+END+"/usuarios");
+	public static final Uri CONTENT_URI = Uri.parse("content://"+END+"/"+DatabaseHelper.TABLE_NAME);
 	
 	SQLiteDatabase db;
 	DatabaseHelper dbHelper;
