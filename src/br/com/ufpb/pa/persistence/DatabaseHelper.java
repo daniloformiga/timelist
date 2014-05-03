@@ -1,17 +1,36 @@
 package br.com.ufpb.pa.persistence;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.AsyncTask;
 import android.util.Log;
 import br.com.ufpb.pa.login.Login;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+	
+	ArrayList<Login> lista;
 
 	public static final String DATABASE_NAME = "timelistOficial.db";
 	public static final String TABLE_NAME = "T_Login";
@@ -51,29 +70,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 	public List<Login> listarLogins() {
 		Login login;
 
-		ArrayList<Login> lista = new ArrayList<Login>();
+		lista = new ArrayList<Login>();
 
 		SQLiteDatabase db = getReadableDatabase();
 
 		Cursor c = db.query("T_Login", null, null, null, null, null, "_id");
 
-		if (c.getCount() > 0) {
 
-			c.moveToFirst();
-
-			while (!c.isAfterLast()) {
-
-				Long id = c.getLong(0);
-				String loginBD = c.getString(1);
-				String passwdBD = c.getString(2);
-				String permissionBD = c.getString(3);
-
-				login = new Login(id, loginBD, passwdBD, permissionBD);
-				lista.add(login);
-				c.moveToNext();
-
-			}
-		}
+		RestConnection rc = new RestConnection();
+		rc.doInBackground();
+		
 		c.close();
 		db.close();
 		return lista;
@@ -90,5 +96,68 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		onCreate(db);
 
 	}
+	
+	 public class RestConnection extends AsyncTask<Void, Void, Void> {
+
+			@Override
+			protected Void doInBackground(Void... params) {
+
+				String users = "http://classifikdos.herokuapp.com/usuarios";
+
+				HttpClient client = new DefaultHttpClient();
+				HttpGet get = new HttpGet(users);
+
+				try {
+
+					HttpResponse response = client.execute(get);
+					StatusLine statusLine = response.getStatusLine();
+					int status = statusLine.getStatusCode();
+
+					if (status != 200) {
+
+					} else {
+
+						InputStream jsonStream = response.getEntity().getContent();
+						BufferedReader reader = new BufferedReader(
+								new InputStreamReader(jsonStream));
+						StringBuilder builder = new StringBuilder();
+
+						String line;
+
+						while ((line = reader.readLine()) != null) {
+							builder.append(line);
+						}
+
+						String jsonData = builder.toString();
+						
+						Log.d("resultado", jsonData);
+
+						JSONArray array = new JSONArray(jsonData);
+
+						for (int i = 0; i < array.length(); i++) {
+
+							JSONObject user = array.getJSONObject(i);
+							
+							Login login = new Login(i, user.getString("nome"), user.getString("senha"), Login.ADMIN);
+							lista.add(login);
+							
+
+						}
+
+					}
+
+				} catch (ClientProtocolException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				return null;
+			}
+	 }
 
 }
