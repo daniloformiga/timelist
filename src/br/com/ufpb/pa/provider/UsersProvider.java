@@ -30,7 +30,7 @@ public class UsersProvider extends ContentProvider{
 	
 	private static final String END = "br.com.ufpb.pa.provider.UsersProvider";
 	
-	public static final Uri CONTENT_URI = Uri.parse("content://"+END+"/"+DatabaseHelper.TABLE_NAME);
+	public static final Uri CONTENT_URI = Uri.parse("content://"+END+"/usuarios");
 	
 	SQLiteDatabase db;
 	DatabaseHelper dbHelper;
@@ -57,12 +57,14 @@ public class UsersProvider extends ContentProvider{
 	@Override
 	public Uri insert(Uri uri, ContentValues values) {
 		
+		Log.d("bbbbb", "bbbbbbb");
+		
 		JsonObjectRequest postRequest;
 		db = dbHelper.getReadableDatabase();
 
 		if (uriMatcher.match(uri) == 1) {
 
-			db.insert(DatabaseHelper.TABLE_NAME, null, values);
+			//db.insert(DatabaseHelper.TABLE_NAME, null, values);
 
 			JSONObject json = new JSONObject();
 
@@ -78,7 +80,7 @@ public class UsersProvider extends ContentProvider{
 
 				System.out.println(json.toString());
 
-				String url = "http://classifikdos.herokuapp.com/usuarios";
+				String url = "http://classifikdos.herokuapp.com/usuarios/";
 				postRequest = new JsonObjectRequest(Request.Method.POST, url,
 						json, new Response.Listener<JSONObject>() {
 							@Override

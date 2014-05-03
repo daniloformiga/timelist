@@ -69,7 +69,7 @@ public class ListUser extends Activity {
 		    final ArrayList<String> list = new ArrayList<String>();
 		    
 		    for(Login result : db.listarLogins()){
-		    	list.add(result.getLogin());
+		    	list.add("Nome: " + result.getLogin() + " / Senha: " + result.getPasswd());
 		    }
 		    
 		    

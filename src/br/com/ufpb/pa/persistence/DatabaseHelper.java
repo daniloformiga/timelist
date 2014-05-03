@@ -76,7 +76,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 		Cursor c = db.query("T_Login", null, null, null, null, null, "_id");
 
-
 		RestConnection rc = new RestConnection();
 		rc.doInBackground();
 		
