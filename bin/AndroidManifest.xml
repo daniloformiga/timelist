@@ -7,6 +7,9 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -49,7 +52,12 @@
         
         <activity android:name="br.com.ufpb.pa.user.ListUser" android:label="@string/listUser"  />
         
-        <provider android:authorities="br.com.ufpb.pa.provider.usersprovider" android:name=".UsersProviders"/>
+        <provider android:name=".provider.UsersProvider"
+                  android:multiprocess="true"
+                  android:exported="false"
+                  android:authorities=".pa.provider" />
+        
+        
         
     </application>
 

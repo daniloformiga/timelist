@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -79,6 +80,10 @@ public class AddUser extends Activity {
 					
 					textLogin.setText("");
 					textPasswd.setText("");
+					Log.d("a", "a");
+			
+					getApplicationContext().getContentResolver().insert(UsersProvider.CONTENT_URI, null);
+					
 					String text = "Usuário cadastrado com Sucesso!";
 					Toast tempMessage = Toast.makeText(getApplicationContext(), text,Toast.LENGTH_SHORT);
 					tempMessage.show();

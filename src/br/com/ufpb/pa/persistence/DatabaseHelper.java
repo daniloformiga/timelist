@@ -77,6 +77,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		c.close();
 		db.close();
 		return lista;
+		
+		
 	}
 
 	@Override

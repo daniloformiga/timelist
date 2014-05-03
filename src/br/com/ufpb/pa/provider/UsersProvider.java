@@ -9,7 +9,6 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
-import android.text.GetChars;
 import android.util.Log;
 import br.com.ufpb.pa.menu.MenuUsers;
 import br.com.ufpb.pa.persistence.DatabaseHelper;
@@ -23,11 +22,14 @@ import com.android.volley.toolbox.Volley;
 
 public class UsersProvider extends ContentProvider{
 	
+	public static final String AUTHORITY = "br.com.ufpb.pa.provider";
+	
 	private static RequestQueue queue;
 	
 	public static MenuUsers user;
 	
 	private static final String END = "br.com.ufpb.pa.provider.UsersProvider";
+	
 	public static final Uri CONTENT_URI = Uri.parse("content://"+END+"/"+DatabaseHelper.TABLE_NAME);
 	
 	SQLiteDatabase db;
@@ -62,23 +64,21 @@ public class UsersProvider extends ContentProvider{
 
 			db.insert(DatabaseHelper.TABLE_NAME, null, values);
 
-			// String j =
-			// "{\"cnpj\":\"12345678901234\",\"nome\":\"Sinval\",\"usuario\":{\"email\":\"sinval.vieira@dce.ufpb.br\",\"id\":1,\"senha\":\"123456\",\"telefone\":\"88667755\",\"version\":0}}";
-
 			JSONObject json = new JSONObject();
 
 			try {
 
+				Log.d("b", "b");
+				
 				JSONObject user = new JSONObject("");
 
-
-				json.put("nome", values.get("name"));
-				json.put("cnpj", values.get("cnpj"));
-				json.put("usuario", user);
+				json.put("email", "test@test.com");
+				json.put("nome", "danilo");
+				json.put("senha", "sim");
 
 				System.out.println(json.toString());
 
-				String url = "http://54.187.110.85:8080/iConta/clientes";
+				String url = "http://classifikdos.herokuapp.com/usuarios";
 				postRequest = new JsonObjectRequest(Request.Method.POST, url,
 						json, new Response.Listener<JSONObject>() {
 							@Override
@@ -112,8 +112,8 @@ public class UsersProvider extends ContentProvider{
 
 	@Override
 	public boolean onCreate() {
-		// TODO Auto-generated method stub
-		return false;
+		this.dbHelper = new DatabaseHelper(getContext());
+		return true;
 	}
 
 	@Override
