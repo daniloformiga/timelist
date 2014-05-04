@@ -71,16 +71,12 @@ public class UsersProvider extends ContentProvider{
 			try {
 
 				Log.d("b", "b");
-				
-				JSONObject user = new JSONObject("");
 
-				json.put("email", "test@test.com");
-				json.put("nome", "danilo");
-				json.put("senha", "sim");
+				json.put("email", values.get("email"));
+				json.put("nome", values.get("nome"));
+				json.put("senha", values.get("senha"));
 
-				System.out.println(json.toString());
-
-				String url = "http://classifikdos.herokuapp.com/usuarios/";
+				String url = USUARIOS_GET;
 				postRequest = new JsonObjectRequest(Request.Method.POST, url,
 						json, new Response.Listener<JSONObject>() {
 							@Override
@@ -119,13 +115,13 @@ public class UsersProvider extends ContentProvider{
 	}
 
 	@Override
-	public Cursor query(Uri uri, String[] arg1, String arg2, String[] arg3,
-			String arg4) {
+	public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs,
+			String sortOrder) {
 		
 		Cursor cursor;
 
-		cursor = db.query(DatabaseHelper.DATABASE_NAME, arg1,
-				arg2, arg3, null, null, arg4);
+		cursor = db.query(DatabaseHelper.DATABASE_NAME, projection,
+				selection, selectionArgs, null, null, sortOrder);
 
 		cursor.setNotificationUri(getContext().getContentResolver(), uri);
 		db = dbHelper.getReadableDatabase();
@@ -169,9 +165,11 @@ public class UsersProvider extends ContentProvider{
 												System.out.println(error2);
 											}
 										});
+								
 								queue = Volley.newRequestQueue(getContext());
 								queue.add(putRequest);
 								queue.start();
+								
 							} catch (JSONException e) {
 								e.printStackTrace();
 							}
