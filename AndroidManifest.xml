@@ -1,64 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.ufpb.pa"
-    android:versionCode="1"
-    android:versionName="1.0" >
+	package="br.com.lercode"
+	android:versionCode="1"
+	android:versionName="1.0">
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
-    
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-feature
+		android:name="android.hardware.camera"
+		android:required="true"/>
+	
+	<uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name="br.com.ufpb.pa.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+	<application android:label="@string/app_name">
+		<activity
+		    android:icon="@drawable/ic_launcher"
+			android:name="br.com.lercode.login.Login"
+			android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        
-        <activity android:name="TimeList" android:label="@string/timeList"  />
-                
-        <activity android:name="br.com.ufpb.pa.menu.MenuPrincipal" android:label="@string/menuPrincipal" />
-        
-        <activity android:name="br.com.ufpb.pa.menu.MenuSeller" android:label="@string/menuSeller" />
-        
-        <activity android:name="br.com.ufpb.pa.menu.MenuUsers" android:label="@string/menuUsers" />
-        
-        <activity android:name="br.com.ufpb.pa.menu.MenuReports" android:label="@string/menuReports"  />
-        
-        <activity android:name="br.com.ufpb.pa.seller.SellerDecision" android:label="@string/sellerDecision"  />
-        
-        <activity android:name="br.com.ufpb.pa.login.ConfirmPasswd" android:label="@string/confirmPassword"  />
-        
-        <activity android:name="br.com.ufpb.pa.seller.SubTotal" android:label="@string/subTotal"  />
-        
-        <activity android:name="br.com.ufpb.pa.client.AddClient" android:label="@string/addClient" />
-        
-        <activity android:name="br.com.ufpb.pa.user.AddUser" android:label="@string/addUser" />
-        
-        <activity android:name="br.com.ufpb.pa.user.RemoveUser" android:label="@string/removeUser"  />
-        
-        <activity android:name="br.com.ufpb.pa.user.EditUser" android:label="@string/editUser"  />
-        
-        <activity android:name="br.com.ufpb.pa.user.ListUser" android:label="@string/listUser"  />
-        
-        <provider android:name=".provider.UsersProvider"
-                  android:multiprocess="true"
-                  android:exported="false"
-                  android:authorities=".pa.provider" />
-        
-        
-        
-    </application>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		
+		<activity android:name="br.com.lercode.Lercode" android:label="Lercode" />
+		
+	</application>
 
 </manifest>
